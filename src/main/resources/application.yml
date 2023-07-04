@@ -1,5 +1,0 @@
-server:
-  port: 8080
-
-topic:
-  name: t.temp.sensor

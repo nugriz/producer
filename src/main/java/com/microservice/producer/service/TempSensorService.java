@@ -7,9 +7,9 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.microservice.producer.model.TempSensor;
 import com.microservice.producer.service.producer.Producer;
 
-import lombok.extern.slf4j.Slf4j;
+//import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
+//@Slf4j
 @Service
 public class TempSensorService {
 

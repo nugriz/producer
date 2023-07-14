@@ -1,0 +1,26 @@
+### Gajadi dipake ###
+apiVersion: apps/v1
+kind: Deployment # Kubernetes resource kind we are creating
+metadata:
+  name: producer
+spec:
+  selector:
+    matchLabels:
+      app: producer
+  replicas: 1 # Number of replicas that will be created for this deployment
+  template:
+    metadata:
+      labels:
+        app: producer
+    spec:
+      containers:
+        - name: producer
+          image: rizkinu/intern:1.4
+          env:
+          - name: ENV_SERVER_EUREKA
+            value: 'http://discovery-service:8761/eureka'
+# Image that will be used to containers in the cluster
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+# The port that the container is running on in the cluster

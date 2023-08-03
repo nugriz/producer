@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: producer
-          image: rizkinu/intern:1.4
+          image: rizkinu/intern:1.6
           env:
           - name: ENV_SERVER_EUREKA
             value: 'http://discovery-service:8761/eureka'
